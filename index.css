@@ -1306,6 +1306,75 @@ letter-spacing: 3pt;
       z-index: 1;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     } 
+
+        /* ----------*/
+
+        .frontphotogs {
+
+          display: flex;
+          z-index: 7;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
+        }
+      
+        .gamesite {
+          display: flex;
+          flex-direction: row;
+          margin-top: 50pt;
+        }
+      
+        .gsphoto {
+          display: none;
+        }
+       
+        .frontphotogs:hover {
+        -moz-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -o-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+        }
+      
+        .frontphotogs:hover + .gsphoto {
+          display: flex;
+          flex-direction: row;
+        }
+      
+      
+        .gsphoto1 {
+          margin-left: -280pt;
+          z-index: 6;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gsphoto2 {
+          margin-left: -280pt;
+          z-index: 5;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         }
+      
+        .gsphoto3 {
+          margin-left: -280pt;
+          z-index: 4;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gsphoto4 {
+          margin-left: -280pt;
+          z-index: 3;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gsphoto5 {
+          margin-left: -280pt;
+          z-index: 2;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gsphoto6 {
+          margin-left: -280pt;
+          z-index: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        } 
 /* 
 font-family: "bd-retrocentric", sans-serif;
 font-weight: 400;
