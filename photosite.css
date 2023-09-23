@@ -34,18 +34,27 @@ letter-spacing: 3pt;
   }
   
   .gallery img {
-    max-width: 100%;
+    max-width: 60%;
     vertical-align: top;
+    left: 17%;
+    align-items: center;
+    justify-content: center;
   }
   
   .gallery {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px auto;
-    max-width: 600px;
-    position: relative;
+    max-width: 900px;
     padding-top: 66.6666666667%;
+    position: relative;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 100px) {
     .gallery {
       padding-top: 400px;
     }
@@ -59,8 +68,9 @@ letter-spacing: 3pt;
   }
   .gallery__thumb {
     padding-top: 6px;
-    margin: 6px;
+    margin: 1px;
     display: block;
+    
   }
   .gallery__selector {
     position: absolute;
