@@ -1374,6 +1374,140 @@ letter-spacing: 3pt;
           margin-left: -280pt;
           z-index: 1;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .frontphotofg {
+
+          display: flex;
+          z-index: 7;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
+        }
+      
+        .femgro {
+          display: flex;
+          flex-direction: row;
+          margin-top: 50pt;
+        }
+      
+        .fgphotos {
+          display: none;
+        }
+       
+        .frontphotofg:hover {
+        -moz-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -o-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+        }
+      
+        .frontphotofg:hover + .fgphotos {
+          display: flex;
+          flex-direction: row;
+        }
+      
+      
+        .fgphoto1 {
+          margin-left: -280pt;
+          z-index: 6;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .fgphoto2 {
+          margin-left: -280pt;
+          z-index: 5;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         }
+      
+        .fgphoto3 {
+          margin-left: -280pt;
+          z-index: 4;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .fgphoto4 {
+          margin-left: -280pt;
+          z-index: 3;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .fgphoto5 {
+          margin-left: -280pt;
+          z-index: 2;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .fgphoto6 {
+          margin-left: -280pt;
+          z-index: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        } 
+
+        .frontphotog {
+
+          display: flex;
+          z-index: 7;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      
+        }
+      
+        .gay {
+          display: flex;
+          flex-direction: row;
+          margin-top: 50pt;
+        }
+      
+        .gphotos {
+          display: none;
+        }
+       
+        .frontphotog:hover {
+        -moz-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -o-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+        }
+      
+        .frontphotog:hover + .gphotos {
+          display: flex;
+          flex-direction: row;
+        }
+      
+      
+        .gphoto1 {
+          margin-left: -180pt;
+          z-index: 6;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gphoto2 {
+          margin-left: -180pt;
+          z-index: 5;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         }
+      
+        .gphoto3 {
+          margin-left: -180pt;
+          z-index: 4;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gphoto4 {
+          margin-left: -180pt;
+          z-index: 3;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gphoto5 {
+          margin-left: -180pt;
+          z-index: 2;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .gphoto6 {
+          margin-left: -180pt;
+          z-index: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         } 
 /* 
 font-family: "bd-retrocentric", sans-serif;
