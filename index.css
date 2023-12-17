@@ -1509,6 +1509,189 @@ letter-spacing: 3pt;
           z-index: 1;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         } 
+
+        .street {
+          display: flex;
+          flex-direction: row;
+          margin-top: 50pt;
+        }
+      
+        .sphoto {
+          display: none;
+        }
+       
+        .frontphotos:hover {
+        -moz-transform: rotate(4deg);
+        -webkit-transform: rotate(4deg);
+        -o-transform: rotate(4deg);
+        -ms-transform: rotate(4deg);
+        }
+      
+        .frontphotos:hover + .sphoto {
+          display: flex;
+          flex-direction: row;
+        }
+      
+      
+        .sphoto1 {
+          margin-left: -120pt;
+          z-index: 6;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .sphoto2 {
+          margin-left: -120pt;
+          z-index: 5;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+         }
+      
+        .sphoto3 {
+          margin-left: -120pt;
+          z-index: 4;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .sphoto4 {
+          margin-left: -120pt;
+          z-index: 3;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    
+        .sphoto5 {
+          margin-left: -120pt;
+          z-index: 2;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+      
+        .sphoto6 {
+          margin-left: -120pt;
+          z-index: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        } 
+    
+      /* ----------*/
+
+      .jewlery {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50pt;
+      }
+    
+      .jphoto {
+        display: none;
+      }
+     
+      .frontphotoj:hover {
+      -moz-transform: rotate(4deg);
+      -webkit-transform: rotate(4deg);
+      -o-transform: rotate(4deg);
+      -ms-transform: rotate(4deg);
+      }
+    
+      .frontphotoj:hover + .jphoto {
+        display: flex;
+        flex-direction: row;
+      }
+    
+    
+      .jphoto1 {
+        margin-left: -120pt;
+        z-index: 6;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    
+      .jphoto2 {
+        margin-left: -120pt;
+        z-index: 5;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       }
+    
+      .jphoto3 {
+        margin-left: -120pt;
+        z-index: 4;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    
+      .jphoto4 {
+        margin-left: -120pt;
+        z-index: 3;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+  
+      .jphoto5 {
+        margin-left: -120pt;
+        z-index: 2;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    
+      .jphoto6 {
+        margin-left: -120pt;
+        z-index: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      } 
+  
+    /* ----------*/
+
+    .bts {
+      display: flex;
+      flex-direction: row;
+      margin-top: 50pt;
+    }
+  
+    .btsphoto {
+      display: none;
+    }
+   
+    .frontphotobts:hover {
+    -moz-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -ms-transform: rotate(4deg);
+    }
+  
+    .frontphotobts:hover + .btsphoto {
+      display: flex;
+      flex-direction: row;
+    }
+  
+  
+    .btsphoto1 {
+      margin-left: -120pt;
+      z-index: 6;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .btsphoto2 {
+      margin-left: -120pt;
+      z-index: 5;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     }
+  
+    .btsphoto3 {
+      margin-left: -120pt;
+      z-index: 4;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .btsphoto4 {
+      margin-left: -120pt;
+      z-index: 3;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .btsphoto5 {
+      margin-left: -120pt;
+      z-index: 2;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .btsphoto6 {
+      margin-left: -120pt;
+      z-index: 1;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    } 
+
+  /* ----------*/
 /* 
 font-family: "bd-retrocentric", sans-serif;
 font-weight: 400;
