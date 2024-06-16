@@ -1,0 +1,67 @@
+.header {
+    padding-left: 10px;
+    padding-top: 0px;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+font-family: "balboa", sans-serif;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 3pt;
+  }
+  .verticalStrip {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height:100%;
+    z-index: 8;
+  }
+
+  .strip1 {
+    margin-left: -38vh; 
+  } 
+.collapsible {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: "balboa", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 3pt;
+    font-size: 100px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  .backarrow {
+    position: fixed; 
+    bottom: 0px; 
+    left: 0px
+  }
+    .backarrow img {
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  }
+
+  .backarrow:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    
+  }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <link rel="stylesheet" href="https://use.typekit.net/lyj2sgn.css">
+    <link rel="stylesheet" href="https://use.typekit.net/lyj2sgn.css">  
+    <link rel="stylesheet" href="https://use.typekit.net/lyj2sgn.css">
+    <title>hannah cannizzo's portfolio</title>
+    <link rel="icon" href="PORTFOLIO IMAGES/hannahlogo.png">
+    <link rel="stylesheet" href="branding.css" type="text/css"/>
+  </head>
+  <body> 
+    <div class="verticalStrip">
+        <div class="strip1"><img src="PORTFOLIO IMAGES/sidebar 2.png" alt="" width="700vh"></div>
+      </div>
+    <div class="header">
+        <h1>HANNAH CANNIZZO'S PORTFOLIO</h1>
+      </div>
+<button type="button" class="collapsible">Exceptional Capital</button>
+<div class="content">
+  <p>Lorem ipsum...</p>
+</div>
+<button type="button" class="collapsible">Savannah Kofton</button>
+<div class="content">
+  <p>Lorem ipsum...</p>
+  
+</div>
+<button type="button" class="collapsible">Williston Northampton</button>
+<div class="content">
+  <p>Lorem ipsum...</p>
+</div>
+<div class="backarrow">
+    <a href="index.html"><img src="PORTFOLIO IMAGES/back arrow 1.png" height="300px"></a>  
+</div> 
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+</body>
+</html>
