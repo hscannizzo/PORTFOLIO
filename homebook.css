@@ -1,4 +1,5 @@
-.header {
+@media (min-width: 600px) {
+  .header {
     padding-left: 10px;
     padding-top: 0px;
     text-align: left;
@@ -185,6 +186,55 @@ letter-spacing: 3pt;
     
   }
 
+}
+@media (max-width: 600px) {
+  .header {
+    padding-left: 10px;
+    padding-top: 0px;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+font-family: "balboa", sans-serif;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 3pt;
+  }
+  .header2 {
+    padding-top: 10px;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+font-family: "balboa", sans-serif;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 3pt;
+  }
 
-
+  .verticalStrip {
+display: none;
+  }
   
+
+
+.prevButton {
+display: none;
+}
+
+.nextButton {
+  display: none;
+
+}
+
+.backarrow {
+  display: none;
+}
+
+.item {
+text-align: center;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+}
