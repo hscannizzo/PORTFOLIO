@@ -1901,16 +1901,14 @@ display: none;
 display: none;
 }
 .frontphotogs {
-  margin-top: 20%;
-  text-align: center;
+  display: none;
 }
 
 .gsphoto {
 display: none;
 }
 .frontphotops {
-  margin-top: 20%;
-  text-align: center;
+  display: none;
 }
 
 .psphoto {

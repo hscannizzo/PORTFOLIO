@@ -91,3 +91,46 @@ margin-right: 10%;
     
   }
 }
+@media (max-width: 600px) {
+  body {
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    z-index: index 9;
+}
+
+.header {
+    padding-left: 10px;
+    padding-top: 0px;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+font-family: "balboa", sans-serif;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 3pt;
+  }
+  .header2 {
+    padding-top: 10px;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+font-family: "balboa", sans-serif;
+font-weight: 700;
+font-style: normal;
+letter-spacing: 3pt;
+  }
+
+  .verticalStrip {
+ display: none;
+  }
+  img {
+    width: 300px;
+    height: auto;
+  }
+  .gallery-item {
+    text-align: center;
+  }
+}
