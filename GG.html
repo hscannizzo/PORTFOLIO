@@ -67,40 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="carousel-track">
 
     <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY1.jpg">
+      <img src="ALL PHOTOS/GG/GG1.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY2.jpg">
+      <img src="ALL PHOTOS/GG/GG2.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY3.jpg">
+      <img src="ALL PHOTOS/GG/GG3.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY4.jpg">
+      <img src="ALL PHOTOS/GG/GG4.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY5.jpg">
+      <img src="ALL PHOTOS/GG/GG5.png">
     </div>
 
-    <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY6.jpg">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY7.jpg">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY8.jpg">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/AISY/AISY9.jpg">
-    </div>
 
 
   </div>
@@ -118,15 +103,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- TITLE -->
   <div class="project-title-block">
-    <h1>AN ILL-SPENT YOUTH</h1>
-    <div class="project-meta">PHOTOGRAPHIC SERIES, 2025</div>
+    <h1>GRAFFITI GROOVE</h1>
+    <div class="project-meta">FASHION PHOTOGRAPHY, 2023</div>
   </div>
 
   <!-- DESCRIPTION -->
   <div class="project-description">
-   An Ill-Spent Youth is a black-and-white photographic series documenting the queer nightlife scene in Brooklyn over the course of a single evening at a dive bar. The project captures intimate moments of fashion, friendship, and nightlife rituals, from billiards to dancing, revealing the atmosphere of a tight-knit community and the fleeting energy of late-night gathering spaces.
-<br>“A proficiency at billiards is a sign of a ill-spent youth”
-<br>- Charles Roupell 
+   Graffiti Groove is a fashion editorial photographed 
+   for Bliss Magazine and shot across locations in New 
+   York City. The project captures contemporary street style 
+   within the textures of the urban landscape, using graffiti, 
+   architecture, and public space as visual backdrops. 
+   I photographed the entire series, developing compositions that 
+   merge fashion photography with the energy and visual language of the city.
 </div>
 
   <!-- INFO -->
@@ -134,13 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div>
       <h3>Size:</h3>
-      <p>6892 x 4594 px
-        <br>4594 x 6892 px</p>
+      <p>8.5 x 11 in</p>
     </div>
 
     <div>
       <h3>Format:</h3>
-      <p>Shot on Nikon Z7II<br>Brooklyn, NY</p>
+      <p>Shot on Nikon Z7II<br>Manhattan, NY</p>
     </div>
 
     <div>
@@ -153,4 +141,34 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 
 
+<script>
+const items = document.querySelectorAll('.media-item');
+
+function updateActive() {
+  let closestItem = null;
+  let closestOffset = Infinity;
+
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const offset = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+    if (offset < closestOffset) {
+      closestOffset = offset;
+      closestItem = item;
+    }
+  });
+
+  items.forEach(item => item.classList.remove('active'));
+
+  if (closestItem) {
+    closestItem.classList.add('active');
+  }
+}
+
+/* run on scroll */
+window.addEventListener('scroll', updateActive);
+
+/* run on load */
+window.addEventListener('load', updateActive);
+</script>
 </body>

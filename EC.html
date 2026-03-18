@@ -22,11 +22,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let index = 0;
 
+  function handleVideos() {
+  slides.forEach((slide, i) => {
+    const video = slide.querySelector("video");
+
+    if (video) {
+      if (i !== index) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  });
+}
   function updateCarousel() {
     track.style.transform = "translateX(-" + (index * 100) + "%)";
 
     prev.classList.toggle("hidden", index === 0);
     next.classList.toggle("hidden", index === slides.length - 1);
+
+    handleVideos();
   }
 
   next.addEventListener("click", function () {
@@ -67,53 +81,34 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="carousel-track">
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU1.png">
+      <img src="ALL PHOTOS/EC/EC1.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU2.png">
+      <img src="ALL PHOTOS/EC/EC2.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU3.png">
+      <img src="ALL PHOTOS/EC/EC3.jpg">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU4.png">
+      <img src="ALL PHOTOS/EC/EC4.jpg">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU5.png">
+      <img src="ALL PHOTOS/EC/EC5.png">
     </div>
 
     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU6.png">
+      <img src="ALL PHOTOS/EC/EC6.JPG">
     </div>
 
-    <div class="slide">
-      <img src="ALL PHOTOS/PU/PU7.png">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/PU/PU8.png">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/PU/PU9.png">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/PU/PU10.png">
-    </div>
-
-    <div class="slide">
-      <img src="ALL PHOTOS/PU/PU11.png">
-    </div>
-
-     <div class="slide">
-      <img src="ALL PHOTOS/PU/PU12.png">
-    </div>
-    
+   <div class="slide">
+<video class="carousel-video" controls playsinline preload="metadata">
+  <source src="ALL PHOTOS/EC/EC6.mp4" type="video/mp4">
+</video>
+</div> 
 
 
   </div>
@@ -131,15 +126,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- TITLE -->
   <div class="project-title-block">
-    <h1>AN ILL-SPENT YOUTH</h1>
-    <div class="project-meta">PHOTOGRAPHIC SERIES, 2025</div>
+    <h1>EXCEPTIONAL CAPITAL</h1>
+    <div class="project-meta">BRAND DESIGN, 2023-2025</div>
   </div>
 
   <!-- DESCRIPTION -->
   <div class="project-description">
-   An Ill-Spent Youth is a black-and-white photographic series documenting the queer nightlife scene in Brooklyn over the course of a single evening at a dive bar. The project captures intimate moments of fashion, friendship, and nightlife rituals, from billiards to dancing, revealing the atmosphere of a tight-knit community and the fleeting energy of late-night gathering spaces.
-<br>“A proficiency at billiards is a sign of a ill-spent youth”
-<br>- Charles Roupell 
+   Exceptional Capital is a venture capital firm where I worked as 
+   a design intern producing branded media and communications. 
+   My work included monthly newsletters, promotional videos, social 
+   media content, and merchandise design, as well as event photography 
+   and promotional imagery. I also developed a series of proposed brand 
+   expansion concepts, extending the firm’s visual identity into new 
+   formats and touchpoints while strengthening consistency across platforms.
+
 </div>
 
   <!-- INFO -->
@@ -147,18 +147,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div>
       <h3>Size:</h3>
-      <p>6892 x 4594 px
-        <br>4594 x 6892 px</p>
+      <p>Various Formats</p>
     </div>
 
-    <div>
-      <h3>Format:</h3>
-      <p>Shot on Nikon Z7II<br>Brooklyn, NY</p>
-    </div>
+
 
     <div>
       <h3>Roles/Skills:</h3>
-      <p>Photography</p>
+      <p>Brand Design, Photography, 
+        <br>Illustration, Animation</p>
     </div>
 
   </div>
@@ -169,18 +166,33 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="content-width project-media">
 
   <div class="media-item">
-    <img src="ALL PHOTOS/PU/process/PROCESSPU1.jpg">
-    <div class="media-caption">Recipe booklet covers exploring seasonal preservation</div>
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC1.png">
+    <div class="media-caption">testing color relationships and contrast across the full palette</div>
   </div>
 
   <div class="media-item">
-    <img src="ALL PHOTOS/PU/process/PUPROCESS2.jpg">
-    <div class="media-caption">Jar testing and color balance during development</div>
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC2.png">
+    <div class="media-caption">early mockups of social posts using photography and type overlays</div>
   </div>
 
   <div class="media-item">
-    <img src="ALL PHOTOS/PU/process/PUPROCESS3.jpg">
-    <div class="media-caption">Fresh radicchio sourced for preservation study</div>
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC3.png">
+    <div class="media-caption">comparing weights and styles of the primary type system</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC4.png">
+    <div class="media-caption">final social post layout combining image, type, and event details</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC5.png">
+    <div class="media-caption">reference images guiding tone, lighting, and social atmosphere</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/EC/REDESIGNEC/REC6.png">
+    <div class="media-caption">workshopping messaging alongside visual direction in a live event setting</div>
   </div>
 
 </div>

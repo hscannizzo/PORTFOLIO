@@ -39,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px 20px;
+  padding: 60px 20px 0px; /* tightened */
 }
 
 /* ---------- CAROUSEL ---------- */
@@ -52,13 +52,19 @@ body {
   overflow: hidden;
 }
 
+.slide video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .carousel-track {
   display: flex;
   height: 100%;
   transition: transform 0.6s ease;
 }
 
-/* one slide = full width */
+/* each slide */
 .slide {
   min-width: 100%;
   height: 100%;
@@ -67,7 +73,7 @@ body {
   align-items: center;
 }
 
-/* image fits inside without cropping */
+/* image behavior */
 .slide img {
   max-height: 100%;
   max-width: 100%;
@@ -118,7 +124,7 @@ body {
 
 .project-title-block {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 40px; /* tightened */
 }
 
 .project-title-block h1 {
@@ -170,7 +176,7 @@ body {
 /* ---------- MEDIA GRID ---------- */
 
 .project-media {
-  max-width: 720px; /* 🔥 matches text width */
+  max-width: 720px;
   margin: 0 auto 100px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -187,6 +193,7 @@ body {
 
 @media (max-width: 767px) {
 
+  /* HEADER */
   .project-header {
     padding: 20px;
   }
@@ -195,8 +202,9 @@ body {
     font-size: 14px;
   }
 
+  /* HERO */
   .project-hero {
-    padding: 40px 20px 10px;
+    padding: 40px 20px 0px;
   }
 
   .carousel-wrapper {
@@ -211,8 +219,9 @@ body {
     right: 8px;
   }
 
+  /* TITLE */
   .project-title-block {
-    margin-top: 60px;
+    margin-top: 24px;
   }
 
   .project-title-block h1 {
@@ -220,19 +229,183 @@ body {
     letter-spacing: 3px;
   }
 
+  /* DESCRIPTION */
   .project-description {
     font-size: 15px;
     margin: 30px auto 50px;
   }
 
+  /* INFO */
   .project-info {
     flex-direction: column;
     gap: 30px;
   }
 
+  /* MEDIA GRID */
   .project-media {
     grid-template-columns: 1fr;
+    max-width: 500px; 
+    margin: 0 auto 80px;
     gap: 16px;
   }
 
+  .media-item {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  /* IMAGE */
+  .media-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease; /* 👈 slightly faster */
+  }
+
+  /* CAPTION */
+  .media-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'MetaOldFrench', serif;
+    font-size: 11.5px; /* 👈 slightly smaller */
+    line-height: 1.4;
+    text-align: center;
+
+    color: white;
+    width: 65%;
+
+    opacity: 0;
+    transition: opacity 0.2s ease; /* 👈 fast + clean */
+  }
+
+  /* ACTIVE STATE */
+  .media-item.active img {
+    filter: brightness(0.25);
+  }
+
+  .media-item.active .media-caption {
+    opacity: 1;
+  }
+
+}
+
+
+/* ---------- MEDIA ITEM ---------- */
+
+.media-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* image */
+.media-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.4s ease;
+}
+
+/* caption (no background) */
+.media-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+
+  font-family: 'MetaOldFrench', serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+
+  color: white;
+  width: 80%;
+
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* hover */
+.media-item:hover img {
+  filter: brightness(0.25);
+}
+
+.media-item:hover .media-caption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- DEVTOOLS-STYLE SCALE ---------- */
+
+.game-section {
+  margin: 80px auto;
+  width: min(1000px, 92vw); /* controls visible frame size */
+  display: flex;
+  justify-content: center;
+}
+
+/* fixed canvas */
+.game-inner {
+  width: 1820px;
+  height: 1041px;
+  transform-origin: top center;
+}
+
+/* scale to fit container */
+.game-inner {
+  transform: scale(calc(1000 / 1820));
+}
+
+/* iframe stays true size */
+.game-inner iframe {
+  width: 1820px;
+  height: 1041px;
+  border: none;
+}
+
+.mobile-only-note {
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .game-section {
+    display: none;
+  }
+
+  .mobile-only-note {
+    display: block;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 80px;
+  }
+
+  .mobile-only-note img {
+    width: 100%;
+    display: block;
+    filter: brightness(0.4);
+  }
+
+  .mobile-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: 'MetaOldFrench', serif;
+    font-size: 14px;
+    width: 70%;
+  }
+}
+
+.game-inner {
+  width: 1820px;
+  height: 1041px;
+  transform-origin: top center;
+
+  /* 🔥 THIS FIXES THE GAP */
+  margin-bottom: -520px; /* half-ish of height */
 }
