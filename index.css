@@ -60,8 +60,9 @@ a:hover {
 }
 
 .role {
-  font-size: 12px;
+  font-size: 15px;
   opacity: 0.7;
+  font-family: 'MetaOldFrench', serif;
 }
 
 .right {
@@ -137,15 +138,16 @@ a:hover {
 
 /* ---------- TEXT ---------- */
 .project-title {
-  font-size: clamp(11px, 1.2vw, 14px);
+  font-size: clamp(11px, 1.5vw, 14px);
   letter-spacing: 1.2px;
   margin-top: 2px;
 }
 
 .project-sub {
-  font-size: clamp(9px, 1vw, 12px);
+  font-size: clamp(9px, 1.2vw, 12px);
   opacity: 0.6;
   margin-top: 2px;
+  font-family: 'MetaOldFrench', serif;
 }
 
 /* ---------- MOBILE ---------- */
@@ -169,6 +171,7 @@ a:hover {
 
   .role {
     font-size: 11px;
+    font-family: 'MetaOldFrench', serif;
   }
 
   .right {

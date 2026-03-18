@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hannah Cannizzo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="allstyles.css">
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".slide");
+  const next = document.querySelector(".arrow.right");
+  const prev = document.querySelector(".arrow.left");
+
+  if (!track || slides.length === 0) return;
+
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = "translateX(-" + (index * 100) + "%)";
+
+    prev.classList.toggle("hidden", index === 0);
+    next.classList.toggle("hidden", index === slides.length - 1);
+  }
+
+  next.addEventListener("click", function () {
+    if (index < slides.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prev.addEventListener("click", function () {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+
+});
+</script>
+<body>
+<!-- HEADER -->
+<div class="project-header">
+  <div><a href="index.html">HOME</a></div>
+  <div class="right">
+    <a href="resume.html">RESUME</a>
+    <a href="info.html">INFO</a>
+  </div>
+</div>
+
+<!-- HERO / CAROUSEL -->
+<section class="project-hero">
+
+<div class="carousel-wrapper">
+
+  <button class="arrow left hidden">‹</button>
+
+  <div class="carousel-track">
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY1.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY2.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY3.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY4.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY5.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY6.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY7.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY8.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/AISY/AISY9.jpg">
+    </div>
+
+
+  </div>
+
+  <button class="arrow right">›</button>
+
+</div>
+
+
+
+</section>
+
+<!-- CONTENT WRAPPER -->
+<div class="content-width">
+
+  <!-- TITLE -->
+  <div class="project-title-block">
+    <h1>ALFAAZ</h1>
+    <div class="project-meta">ZINE COLLECTIVE, 2023–2025</div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="project-description">
+    Alfaaz is a student-run zine collective I worked with from 2023–2025 as a writer, designer, and event organizer. During my time with the group, we produced four issues exploring art, culture, and student voices. I contributed editorial design and written work while also helping organize community events, including a zine swap and two live screenings of The Rocky Horror Picture Show.
+  </div>
+
+  <!-- INFO -->
+  <div class="project-info">
+
+    <div>
+      <h3>Size:</h3>
+      <p>Various Formats</p>
+    </div>
+
+    <div>
+      <h3>Format:</h3>
+      <p>Shot on Nikon Z7II<br>Brooklyn, NY</p>
+    </div>
+
+    <div>
+      <h3>Roles/Skills:</h3>
+      <p>Zine Design, Creative Writing, Event Planning</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- PROCESS / MEDIA -->
+<div class="content-width project-media">
+
+  <img src="../images/process1.jpg">
+  <img src="../images/process2.jpg">
+  <img src="../images/process3.jpg">
+
+  <img src="../images/process4.jpg">
+  <img src="../images/process5.jpg">
+  <img src="../images/process6.jpg">
+
+</div>
+
+</body>

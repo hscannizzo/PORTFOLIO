@@ -1,0 +1,238 @@
+/* ---------- FONT ---------- */
+@font-face {
+  font-family: 'MetaOldFrench';
+  src: url('fonts/Meta-old-French.otf') format('opentype');
+}
+
+/* ---------- GLOBAL ---------- */
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #111;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* ---------- HEADER ---------- */
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 36px;
+}
+
+.project-header a {
+  text-decoration: none;
+  color: #111;
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.project-header .right {
+  display: flex;
+  gap: 30px;
+}
+
+/* ---------- HERO ---------- */
+
+.project-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 20px;
+}
+
+/* ---------- CAROUSEL ---------- */
+
+.carousel-wrapper {
+  position: relative;
+  width: min(1000px, 92vw);
+  height: clamp(420px, 65vh, 720px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+/* one slide = full width */
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* image fits inside without cropping */
+.slide img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ---------- ARROWS ---------- */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 50;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow.left {
+  left: 12px;
+}
+
+.arrow.right {
+  right: 12px;
+}
+
+.arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---------- CONTENT WIDTH ---------- */
+
+.content-width {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- TITLE ---------- */
+
+.project-title-block {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.project-title-block h1 {
+  font-family: 'MetaOldFrench', serif;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.project-meta {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  opacity: 0.6;
+}
+
+/* ---------- DESCRIPTION ---------- */
+
+.project-description {
+  font-family: 'MetaOldFrench', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  margin: 40px auto 60px;
+}
+
+/* ---------- INFO ---------- */
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.project-info h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-family: 'MetaOldFrench', serif;
+}
+
+.project-info p {
+  font-family: 'MetaOldFrench', serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------- MEDIA GRID ---------- */
+
+.project-media {
+  max-width: 720px; /* 🔥 matches text width */
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 767px) {
+
+  .project-header {
+    padding: 20px;
+  }
+
+  .project-header a {
+    font-size: 14px;
+  }
+
+  .project-hero {
+    padding: 40px 20px 10px;
+  }
+
+  .carousel-wrapper {
+    height: clamp(300px, 55vh, 500px);
+  }
+
+  .arrow.left {
+    left: 8px;
+  }
+
+  .arrow.right {
+    right: 8px;
+  }
+
+  .project-title-block {
+    margin-top: 60px;
+  }
+
+  .project-title-block h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+
+  .project-description {
+    font-size: 15px;
+    margin: 30px auto 50px;
+  }
+
+  .project-info {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-media {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+}
