@@ -1,0 +1,138 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #ffffff; /* stark white */
+  color: #111;
+}
+
+/* HEADER */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.project-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-header .right a {
+  margin-left: 20px;
+}
+
+/* SECTION */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+/* BACKGROUND IMAGE */
+.about-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('icons/backgroundphoto.png') center center / cover no-repeat;
+}
+
+/* CENTER CARD (RESPONSIVE + BIGGER) */
+.about-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: clamp(300px, 28vw, 520px);
+  padding: clamp(20px, 2.5vw, 40px);
+
+  background: #ffffff;
+  text-align: center;
+  z-index: 2;
+
+  transition: opacity 0.4s ease;
+}
+
+/* TITLE */
+.about-card h2 {
+  font-size: clamp(12px, 1vw, 16px);
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.me-trigger {
+  color: rgb(164, 33, 33);
+  cursor: pointer;
+}
+
+/* TEXT */
+.about-card p {
+  font-size: clamp(11px, 0.9vw, 14px);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* SOCIAL LINKS */
+.about-links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 24px);
+  margin-top: 15px;
+}
+
+.about-links img {
+  width: clamp(32px, 3vw, 48px);
+  height: auto;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.about-links img:hover {
+  opacity: 0.5;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+
+  .about-card {
+    width: 360px;
+  }
+
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+  .project-header {
+    padding: 16px 20px;
+    font-size: 12px;
+  }
+
+  .about-section {
+    height: calc(100vh - 50px);
+  }
+
+  .about-card {
+    width: 85%;
+    padding: 20px;
+  }
+
+}
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+  .about-card {
+    width: 90%;
+  }
+
+}

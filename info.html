@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Info — Hannah Cannizzo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="info.css">
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="project-header">
+  <div><a href="index.html">HOME</a></div>
+  <div class="right">
+    <a href="resume.html">RESUME</a>
+    <a href="info.html">INFO</a>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+
+  <!-- BACKGROUND IMAGE -->
+  <div class="about-image"></div>
+
+  <!-- CENTER CARD -->
+  <div class="about-card">
+
+    <h2>ABOUT <span class="me-trigger">ME</span></h2>
+
+    <p>
+      Hannah Cannizzo is a graphic designer and multimedia artist based in NYC. 
+      She is currently a senior at Parsons School of Design. Her work spans book 
+      and digital media, often exploring narrative, material, and cultural identity 
+      through visual systems and storytelling.
+    </p>
+
+    <p>
+      She works across photography, publication design, and web, building projects 
+      that feel tactile, human, and intentional.
+    </p>
+
+    <!-- SOCIAL LINKS -->
+    <div class="about-links">
+
+      <a href="https://www.linkedin.com/in/hannah-cannizzo-b5360621b/" target="_blank">
+        <img src="icons/linkedin.png" alt="linkedin">
+      </a>
+
+      <a href="https://bfacd.parsons.edu/2025/hannah-cannizzo" target="_blank">
+        <img src="icons/parsons.png" alt="thesis website">
+      </a>
+
+      <a href="https://www.instagram.com/hscannizzo/" target="_blank">
+        <img src="icons/instagram.png" alt="instagram">
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HOVER SCRIPT (for reliability) -->
+<script>
+const card = document.querySelector('.about-card');
+const me = document.querySelector('.me-trigger');
+
+me.addEventListener('mouseenter', () => {
+  card.style.opacity = "0";
+});
+
+me.addEventListener('mouseleave', () => {
+  card.style.opacity = "1";
+});
+</script>
+
+</body>
+</html>
