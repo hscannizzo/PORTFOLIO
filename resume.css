@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* HEADER */
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.project-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-header .right a {
+  margin-left: 20px;
+}
+
+/* PAGE WRAP */
+.resume-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* DOWNLOAD */
+.resume-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.resume-top a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.resume-top a:hover {
+  opacity: 0.5;
+}
+
+/* PDF VIEWER (DESKTOP DEFAULT) */
+.resume-viewer {
+  width: 100%;
+  aspect-ratio: 8.5 / 11; /* THIS is what makes it scale properly */
+  background: white;
+  border: 1px solid #ddd;
+}
+
+.resume-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+
+  .resume-page {
+    padding: 30px;
+  }
+
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+  .project-header {
+    padding: 16px 20px;
+    font-size: 12px;
+  }
+
+  .resume-page {
+    padding: 20px;
+  }
+
+  .resume-top {
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .resume-viewer {
+    aspect-ratio: auto;
+    height: 75vh; /* better for mobile scrolling */
+    border: none; /* cleaner look */
+  }
+
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 480px) {
+
+  .resume-viewer {
+    height: 70vh;
+  }
+
+}
