@@ -112,6 +112,21 @@ body {
   pointer-events: none;
 }
 
+/* ONLY THIS PAGE */
+
+.grotesque-page .arrow {
+  color: #DE6464;
+  font-size: 28px;
+  z-index: 100;
+}
+
+.grotesque-page .arrow::before {
+  background: rgba(0,0,0,0.4);
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+
+
 /* ---------- CONTENT WIDTH ---------- */
 
 .content-width {

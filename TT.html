@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hannah Cannizzo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="allstyles.css">
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".slide");
+  const next = document.querySelector(".arrow.right");
+  const prev = document.querySelector(".arrow.left");
+
+  if (!track || slides.length === 0) return;
+
+  let index = 0;
+
+  function updateCarousel() {
+    track.style.transform = "translateX(-" + (index * 100) + "%)";
+
+    prev.classList.toggle("hidden", index === 0);
+    next.classList.toggle("hidden", index === slides.length - 1);
+  }
+
+  next.addEventListener("click", function () {
+    if (index < slides.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prev.addEventListener("click", function () {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+
+});
+</script>
+<body>
+<!-- HEADER -->
+<div class="project-header">
+  <div><a href="index.html">HOME</a></div>
+  <div class="right">
+    <a href="resume.html">RESUME</a>
+    <a href="info.html">INFO</a>
+  </div>
+</div>
+
+<!-- HERO / CAROUSEL -->
+<section class="project-hero">
+
+<div class="carousel-wrapper">
+
+  <button class="arrow left hidden">‹</button>
+   <button class="arrow right">›</button>
+
+  <div class="carousel-track">
+
+   <div class="slide">
+<video class="carousel-video" autoplay muted loop playsinline>
+  <source src="ALL PHOTOS/TT/TTVIDEO.mp4" type="video/mp4">
+</video>
+</div> 
+
+    <div class="slide">
+      <img src="ALL PHOTOS/TT/TT1.png">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/TT/TT2.png">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/TT/TT3.png">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/TT/TT4.png">
+    </div>
+
+   
+
+
+  </div>
+
+ 
+
+</div>
+
+
+
+</section>
+
+<!-- CONTENT WRAPPER -->
+<div class="content-width">
+
+  <!-- TITLE -->
+  <div class="project-title-block">
+    <h1>TOUNGE-TIED</h1>
+    <div class="project-meta"> ANIMATION, 2024</div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="project-description">
+   Tongue Tied is a hand-drawn animation loop exploring sensuality, 
+   intimacy, and romantic tension through surreal visual metaphor. 
+   The short animated sequence exaggerates gesture and expression 
+   to examine the awkward, magnetic pull between two figures. Using
+    fluid line work and looping motion, the animation transforms a 
+    fleeting romantic moment into a continuous visual rhythm of attraction 
+    and hesitation.
+</div>
+
+  <!-- INFO -->
+  <div class="project-info">
+
+    <div>
+      <h3>Size:</h3>
+      <p>11 x 8.5 in</p>
+    </div>
+
+
+
+    <div>
+      <h3>Roles/Skills:</h3>
+      <p>Illustration, Animation</p>
+    </div>
+
+  </div>
+
+</div>
+
+ <!-- PROCESS / MEDIA -->
+<div class="content-width project-media">
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/TT/process/TTPROCESS1.jpg">
+    <div class="media-caption">Testing initial color combinations for the characters</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/TT/process/TTPROCESS2.jpg">
+    <div class="media-caption">Organizing individual frames to construct motion across the loop</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/TT/process/TTPROCESS3.jpg">
+    <div class="media-caption">Tracing and refining hand-drawn sequences using a lightbox</div>
+  </div>
+
+</div>
+
+<script>
+const items = document.querySelectorAll('.media-item');
+
+function updateActive() {
+  let closestItem = null;
+  let closestOffset = Infinity;
+
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const offset = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+    if (offset < closestOffset) {
+      closestOffset = offset;
+      closestItem = item;
+    }
+  });
+
+  items.forEach(item => item.classList.remove('active'));
+
+  if (closestItem) {
+    closestItem.classList.add('active');
+  }
+}
+
+/* run on scroll */
+window.addEventListener('scroll', updateActive);
+
+/* run on load */
+window.addEventListener('load', updateActive);
+</script>
+</body>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hannah Cannizzo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="allstyles.css">
+
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".slide");
+  const next = document.querySelector(".arrow.right");
+  const prev = document.querySelector(".arrow.left");
+
+  if (!track || slides.length === 0) return;
+
+  let index = 0;
+
+  function handleVideos() {
+  slides.forEach((slide, i) => {
+    const video = slide.querySelector("video");
+
+    if (video) {
+      if (i !== index) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  });
+}
+  function updateCarousel() {
+    track.style.transform = "translateX(-" + (index * 100) + "%)";
+
+    prev.classList.toggle("hidden", index === 0);
+    next.classList.toggle("hidden", index === slides.length - 1);
+
+    handleVideos();
+  }
+
+  next.addEventListener("click", function () {
+    if (index < slides.length - 1) {
+      index++;
+      updateCarousel();
+    }
+  });
+
+  prev.addEventListener("click", function () {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel();
+
+});
+</script>
+<body>
+<!-- HEADER -->
+<div class="project-header">
+  <div><a href="index.html">HOME</a></div>
+  <div class="right">
+    <a href="resume.html">RESUME</a>
+    <a href="info.html">INFO</a>
+  </div>
+</div>
+
+<!-- HERO / CAROUSEL -->
+<section class="project-hero">
+
+<div class="carousel-wrapper">
+
+  <button class="arrow left hidden">‹</button>
+    <button class="arrow right">›</button>
+
+  <div class="carousel-track">
+
+   <div class="slide">
+<video class="carousel-video" controls playsinline preload="metadata">
+  <source src="ALL PHOTOS/B/BVIDEO.mp4" type="video/mp4">
+</video>
+</div> 
+
+    <div class="slide">
+      <img src="ALL PHOTOS/B/B1.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/B/B2.jpg">
+    </div>
+
+    <div class="slide">
+      <img src="ALL PHOTOS/B/B3.jpg">
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+
+</section>
+
+<!-- CONTENT WRAPPER -->
+<div class="content-width">
+
+  <!-- TITLE -->
+  <div class="project-title-block">
+    <h1>BONES</h1>
+    <div class="project-meta">ANIMATED SHORT FILM, 2024</div>
+  </div>
+
+  <!-- DESCRIPTION -->
+  <div class="project-description">
+   Bones is a short animated comedy film inspired by a 
+   real off-roading trip in the Appalachian mountains. 
+   The story follows a duo whose night in the woods turns 
+   surreal after encountering a deer skull hanging from a tree. 
+   Combining humor with eerie imagery, the animation exaggerates 
+   the paranoia and absurdity of the moment.
+</div>
+
+  <!-- INFO -->
+  <div class="project-info">
+
+    <div>
+      <h3>Size:</h3>
+      <p>1080 x 1920 p</p>
+    </div>
+
+
+
+    <div>
+      <h3>Roles/Skills:</h3>
+      <p>Illustration, Animation</p>
+    </div>
+
+  </div>
+
+</div>
+
+ <!-- PROCESS / MEDIA -->
+<div class="content-width project-media">
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/B/process/BPROCESS1.png">
+    <div class="media-caption">Teaser image used to set the tone and introduce the characters</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/B/process/BPROCESS2.png">
+    <div class="media-caption">Early animatic and storyboard sketches working through pacing and shot sequencing</div>
+  </div>
+
+  <div class="media-item">
+    <img src="ALL PHOTOS/B/process/BPROCESS3.png">
+    <div class="media-caption">Character sheets exploring proportions, expressions, and final color direction</div>
+  </div>
+
+  
+</div>
+
+<script>
+const items = document.querySelectorAll('.media-item');
+
+function updateActive() {
+  let closestItem = null;
+  let closestOffset = Infinity;
+
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const offset = Math.abs(rect.top + rect.height / 2 - window.innerHeight / 2);
+
+    if (offset < closestOffset) {
+      closestOffset = offset;
+      closestItem = item;
+    }
+  });
+
+  items.forEach(item => item.classList.remove('active'));
+
+  if (closestItem) {
+    closestItem.classList.add('active');
+  }
+}
+
+/* run on scroll */
+window.addEventListener('scroll', updateActive);
+
+/* run on load */
+window.addEventListener('load', updateActive);
+</script>
+</body>
