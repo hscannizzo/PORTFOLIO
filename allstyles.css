@@ -1,8 +1,10 @@
 /* ---------- FONT ---------- */
+
 @font-face {
   font-family: 'MetaOldFrench';
   src: url('FONTS/Meta-old-French.otf') format('opentype');
 }
+
 
 /* ---------- GLOBAL ---------- */
 
@@ -12,6 +14,7 @@ body {
   color: #111;
   font-family: 'Space Grotesk', sans-serif;
 }
+
 
 /* ---------- HEADER ---------- */
 
@@ -33,14 +36,16 @@ body {
   gap: 30px;
 }
 
+
 /* ---------- HERO ---------- */
 
 .project-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 20px 0px; /* tightened */
+  padding: 60px 20px 0px;
 }
+
 
 /* ---------- CAROUSEL ---------- */
 
@@ -52,33 +57,64 @@ body {
   overflow: hidden;
 }
 
+
+/* Video support */
+
 .slide video {
+  display: block;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
+
+/* Track */
+
 .carousel-track {
   display: flex;
+  width: 100%;
   height: 100%;
   transition: transform 0.6s ease;
 }
 
-/* each slide */
+
+/* Each slide */
+
 .slide {
   min-width: 100%;
+  width: 100%;
   height: 100%;
+  flex-shrink: 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* image behavior */
-.slide img {
-  max-height: 100%;
+
+/* WebP picture wrapper */
+
+.slide picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Regular JPG images AND images inside picture */
+
+.slide > img,
+.slide picture img {
+  display: block;
+  width: auto;
+  height: auto;
   max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
 }
+
 
 /* ---------- ARROWS ---------- */
 
@@ -112,7 +148,8 @@ body {
   pointer-events: none;
 }
 
-/* ONLY THIS PAGE */
+
+/* ---------- ONLY THIS PAGE ---------- */
 
 .grotesque-page .arrow {
   color: #DE6464;
@@ -121,7 +158,7 @@ body {
 }
 
 .grotesque-page .arrow::before {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 6px 10px;
   border-radius: 50%;
 }
@@ -135,11 +172,12 @@ body {
   padding: 0 20px;
 }
 
+
 /* ---------- TITLE ---------- */
 
 .project-title-block {
   text-align: center;
-  margin-top: 40px; /* tightened */
+  margin-top: 40px;
 }
 
 .project-title-block h1 {
@@ -156,6 +194,7 @@ body {
   opacity: 0.6;
 }
 
+
 /* ---------- DESCRIPTION ---------- */
 
 .project-description {
@@ -165,6 +204,7 @@ body {
   text-align: center;
   margin: 40px auto 60px;
 }
+
 
 /* ---------- INFO ---------- */
 
@@ -188,6 +228,7 @@ body {
   line-height: 1.5;
 }
 
+
 /* ---------- MEDIA GRID ---------- */
 
 .project-media {
@@ -204,11 +245,13 @@ body {
   display: block;
 }
 
+
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 767px) {
 
   /* HEADER */
+
   .project-header {
     padding: 20px;
   }
@@ -217,7 +260,9 @@ body {
     font-size: 14px;
   }
 
+
   /* HERO */
+
   .project-hero {
     padding: 40px 20px 0px;
   }
@@ -234,7 +279,9 @@ body {
     right: 8px;
   }
 
+
   /* TITLE */
+
   .project-title-block {
     margin-top: 24px;
   }
@@ -244,22 +291,28 @@ body {
     letter-spacing: 3px;
   }
 
+
   /* DESCRIPTION */
+
   .project-description {
     font-size: 15px;
     margin: 30px auto 50px;
   }
 
+
   /* INFO */
+
   .project-info {
     flex-direction: column;
     gap: 30px;
   }
 
+
   /* MEDIA GRID */
+
   .project-media {
     grid-template-columns: 1fr;
-    max-width: 500px; 
+    max-width: 500px;
     margin: 0 auto 80px;
     gap: 16px;
   }
@@ -269,34 +322,37 @@ body {
     margin-bottom: 24px;
   }
 
+
   /* IMAGE */
+
   .media-item img {
     width: 100%;
     height: auto;
     display: block;
-    transition: filter 0.3s ease; /* 👈 slightly faster */
+    transition: filter 0.3s ease;
   }
 
+
   /* CAPTION */
+
   .media-caption {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     font-family: 'MetaOldFrench', serif;
-    font-size: 11.5px; /* 👈 slightly smaller */
+    font-size: 11.5px;
     line-height: 1.4;
     text-align: center;
-
     color: white;
     width: 65%;
-
     opacity: 0;
-    transition: opacity 0.2s ease; /* 👈 fast + clean */
+    transition: opacity 0.2s ease;
   }
 
+
   /* ACTIVE STATE */
+
   .media-item.active img {
     filter: brightness(0.25);
   }
@@ -315,7 +371,9 @@ body {
   overflow: hidden;
 }
 
-/* image */
+
+/* Image */
+
 .media-item img {
   width: 100%;
   height: auto;
@@ -323,26 +381,27 @@ body {
   transition: filter 0.4s ease;
 }
 
-/* caption (no background) */
+
+/* Caption */
+
 .media-caption {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-
   font-family: 'MetaOldFrench', serif;
   font-size: 14px;
   line-height: 1.5;
   text-align: center;
-
   color: white;
   width: 80%;
-
   opacity: 0;
   transition: all 0.4s ease;
 }
 
-/* hover */
+
+/* Hover */
+
 .media-item:hover img {
   filter: brightness(0.25);
 }
@@ -352,37 +411,46 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
 /* ---------- DEVTOOLS-STYLE SCALE ---------- */
 
 .game-section {
   margin: 80px auto;
-  width: min(1000px, 92vw); /* controls visible frame size */
+  width: min(1000px, 92vw);
   display: flex;
   justify-content: center;
 }
 
-/* fixed canvas */
+
+/* Fixed canvas */
+
 .game-inner {
   width: 1820px;
   height: 1041px;
   transform-origin: top center;
 }
 
-/* scale to fit container */
+
+/* Scale to fit container */
+
 .game-inner {
   transform: scale(calc(1000 / 1820));
 }
 
+
 /* iframe stays true size */
+
 .game-inner iframe {
   width: 1820px;
   height: 1041px;
   border: none;
 }
 
+
 .mobile-only-note {
   display: none;
 }
+
 
 @media (max-width: 767px) {
 
@@ -414,13 +482,15 @@ body {
     font-size: 14px;
     width: 70%;
   }
+
 }
+
+
+/* ---------- GAME SCALE GAP FIX ---------- */
 
 .game-inner {
   width: 1820px;
   height: 1041px;
   transform-origin: top center;
-
-  /* 🔥 THIS FIXES THE GAP */
-  margin-bottom: -520px; /* half-ish of height */
+  margin-bottom: -520px;
 }
