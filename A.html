@@ -43,10 +43,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+  /* ---------- SWIPE SUPPORT ---------- */
+
+  let startX = 0;
+  let endX = 0;
+
+  track.addEventListener("touchstart", function (event) {
+    startX = event.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener("touchend", function (event) {
+    endX = event.changedTouches[0].clientX;
+
+    handleSwipe();
+  }, { passive: true });
+
+
+  function handleSwipe() {
+    const swipeDistance = startX - endX;
+    const minimumSwipe = 50;
+
+    /* Swipe LEFT → next image */
+    if (
+      swipeDistance > minimumSwipe &&
+      index < slides.length - 1
+    ) {
+      index++;
+      updateCarousel();
+    }
+
+    /* Swipe RIGHT → previous image */
+    if (
+      swipeDistance < -minimumSwipe &&
+      index > 0
+    ) {
+      index--;
+      updateCarousel();
+    }
+  }
+
+
   updateCarousel();
 
 });
 </script>
+
 <body>
 <!-- HEADER -->
 <div class="project-header">

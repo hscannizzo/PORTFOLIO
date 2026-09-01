@@ -22,25 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let index = 0;
 
-  function handleVideos() {
-  slides.forEach((slide, i) => {
-    const video = slide.querySelector("video");
-
-    if (video) {
-      if (i !== index) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    }
-  });
-}
   function updateCarousel() {
     track.style.transform = "translateX(-" + (index * 100) + "%)";
 
     prev.classList.toggle("hidden", index === 0);
     next.classList.toggle("hidden", index === slides.length - 1);
-
-    handleVideos();
   }
 
   next.addEventListener("click", function () {
@@ -56,6 +42,47 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCarousel();
     }
   });
+
+
+  /* ---------- SWIPE SUPPORT ---------- */
+
+  let startX = 0;
+  let endX = 0;
+
+  track.addEventListener("touchstart", function (event) {
+    startX = event.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener("touchend", function (event) {
+    endX = event.changedTouches[0].clientX;
+
+    handleSwipe();
+  }, { passive: true });
+
+
+  function handleSwipe() {
+    const swipeDistance = startX - endX;
+    const minimumSwipe = 50;
+
+    /* Swipe LEFT → next image */
+    if (
+      swipeDistance > minimumSwipe &&
+      index < slides.length - 1
+    ) {
+      index++;
+      updateCarousel();
+    }
+
+    /* Swipe RIGHT → previous image */
+    if (
+      swipeDistance < -minimumSwipe &&
+      index > 0
+    ) {
+      index--;
+      updateCarousel();
+    }
+  }
+
 
   updateCarousel();
 

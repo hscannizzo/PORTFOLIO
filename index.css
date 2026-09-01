@@ -1,10 +1,13 @@
 /* ---------- FONT ---------- */
+
 @font-face {
   font-family: 'MetaOldFrench';
   src: url('FONTS/Meta-old-French.otf') format('opentype');
 }
 
+
 /* ---------- RESET ---------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +24,17 @@ body {
   color: #111;
 }
 
+
 /* ---------- GLOBAL IMAGE ---------- */
+
 img {
   display: block;
   max-width: 100%;
 }
 
+
 /* ---------- LINKS ---------- */
+
 a {
   color: inherit;
   text-decoration: none;
@@ -37,7 +44,9 @@ a:hover {
   opacity: 0.6;
 }
 
+
 /* ---------- HEADER ---------- */
+
 .header {
   position: sticky;
   top: 0;
@@ -71,7 +80,9 @@ a:hover {
   font-size: 17px;
 }
 
+
 /* ---------- HERO ---------- */
+
 .hero {
   min-height: 100vh;
   display: flex;
@@ -90,21 +101,47 @@ a:hover {
   letter-spacing: 0.2px;
 }
 
+
 /* ---------- SCROLL ---------- */
+
 .scroll-indicator {
   position: absolute;
   bottom: 120px;
-  font-size: 18px;
-  opacity: 0.5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+
   animation: float 2s ease-in-out infinite;
 }
 
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+.selected-work {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.7;
 }
 
+.scroll-arrow {
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.5;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+
 /* ---------- PROJECTS ---------- */
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -115,11 +152,12 @@ a:hover {
   margin: 0 auto;
 }
 
+
 /* ---------- PROJECT ---------- */
+
 .project {
   width: clamp(280px, 70vw, 520px);
   text-align: center;
-
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -136,7 +174,9 @@ a:hover {
   margin-bottom: 14px;
 }
 
+
 /* ---------- TEXT ---------- */
+
 .project-title {
   font-size: clamp(11px, 1.5vw, 14px);
   letter-spacing: 1.2px;
@@ -150,7 +190,9 @@ a:hover {
   font-family: 'MetaOldFrench', serif;
 }
 
+
 /* ---------- MOBILE ---------- */
+
 @media (max-width: 767px) {
 
   .header {
@@ -166,7 +208,7 @@ a:hover {
   }
 
   .name {
-    font-size: 15px; /* slightly reduced for mobile balance */
+    font-size: 15px;
   }
 
   .role {
