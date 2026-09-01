@@ -13,75 +13,98 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+  const wrapper = document.querySelector(".carousel-wrapper");
   const track = document.querySelector(".carousel-track");
   const slides = document.querySelectorAll(".slide");
   const next = document.querySelector(".arrow.right");
   const prev = document.querySelector(".arrow.left");
 
-  if (!track || slides.length === 0) return;
+  if (!wrapper || !track || slides.length === 0) return;
 
   let index = 0;
 
   function updateCarousel() {
     track.style.transform = "translateX(-" + (index * 100) + "%)";
 
-    prev.classList.toggle("hidden", index === 0);
-    next.classList.toggle("hidden", index === slides.length - 1);
+    if (prev) {
+      prev.classList.toggle("hidden", index === 0);
+    }
+
+    if (next) {
+      next.classList.toggle(
+        "hidden",
+        index === slides.length - 1
+      );
+    }
   }
 
-  next.addEventListener("click", function () {
-    if (index < slides.length - 1) {
-      index++;
-      updateCarousel();
-    }
-  });
 
-  prev.addEventListener("click", function () {
-    if (index > 0) {
-      index--;
-      updateCarousel();
-    }
-  });
+  /* ---------- ARROW BUTTONS ---------- */
+
+  if (next) {
+    next.addEventListener("click", function () {
+      if (index < slides.length - 1) {
+        index++;
+        updateCarousel();
+      }
+    });
+  }
+
+  if (prev) {
+    prev.addEventListener("click", function () {
+      if (index > 0) {
+        index--;
+        updateCarousel();
+      }
+    });
+  }
 
 
   /* ---------- SWIPE SUPPORT ---------- */
 
   let startX = 0;
-  let endX = 0;
+  let startY = 0;
 
-  track.addEventListener("touchstart", function (event) {
+  wrapper.addEventListener("touchstart", function (event) {
     startX = event.touches[0].clientX;
-  }, { passive: true });
-
-  track.addEventListener("touchend", function (event) {
-    endX = event.changedTouches[0].clientX;
-
-    handleSwipe();
+    startY = event.touches[0].clientY;
   }, { passive: true });
 
 
-  function handleSwipe() {
-    const swipeDistance = startX - endX;
+  wrapper.addEventListener("touchend", function (event) {
+
+    const endX = event.changedTouches[0].clientX;
+    const endY = event.changedTouches[0].clientY;
+
+    const distanceX = endX - startX;
+    const distanceY = endY - startY;
+
     const minimumSwipe = 50;
 
-    /* Swipe LEFT → next image */
+    /* Ignore mostly vertical movements */
+    if (Math.abs(distanceX) < Math.abs(distanceY)) {
+      return;
+    }
+
+    /* Swipe LEFT → next */
     if (
-      swipeDistance > minimumSwipe &&
+      distanceX < -minimumSwipe &&
       index < slides.length - 1
     ) {
       index++;
       updateCarousel();
     }
 
-    /* Swipe RIGHT → previous image */
+    /* Swipe RIGHT → previous */
     if (
-      swipeDistance < -minimumSwipe &&
+      distanceX > minimumSwipe &&
       index > 0
     ) {
       index--;
       updateCarousel();
     }
-  }
+
+  }, { passive: true });
 
 
   updateCarousel();
